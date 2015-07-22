@@ -1,0 +1,31 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.rawgit.com/konvajs/konva/0.9.5/konva.min.js"></script>
+  <meta charset="utf-8">
+  <title>Score</title>
+  <style>
+    body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url("images/fondo_secuencias.png");
+            background-repeat: no-repeat;
+        }
+  </style>
+</head>
+<body onload="javascript:resizeTo(1064,600)">
+  <div id="container"></div>
+   <script type="text/javascript">
+var respuestas = <s:property value="respuestas"/>;
+var resp_correctas = <s:property value="resp_correctas"/>;
+var resp_incorrectas = <s:property value="resp_incorrectas"/>;
+</script>
+  <script src="js/score_questions.js">  </script>
+  	<s:hidden value="respuestas"/>
+	<s:hidden value="resp_correctas"/>
+	<s:hidden value="resp_incorrectas"/>
+</body>
+</html>

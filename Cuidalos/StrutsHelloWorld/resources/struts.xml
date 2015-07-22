@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation"
+        value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources"
+        value="ApplicationResources" />
+ 
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="start" class="login.LoginAction" method="start">
+            <result name="success">select_game.jsp</result>
+        </action>
+        <action name="guardar_heimlich" class="secuence.SecuenceAction" method="guardar_heimlich">
+            <result name="success">score_secuence.jsp</result>
+        </action>
+        <action name="guardar_caida" class="secuence.SecuenceAction" method="guardar_caida">
+            <result name="success">score_secuence2.jsp</result>
+        </action>
+        <action name="guardar_herida" class="secuence.SecuenceAction" method="guardar_herida">
+            <result name="success">score_secuence3.jsp</result>
+        </action>
+        <action name="guardar_huecos" class="puzzle.PuzzleAction" method="guardar_huecos">
+            <result name="success">score_puzzle.jsp</result>
+        </action>
+        <action name="guardar_respuestas" class="puzzle.QuestionAction" method="guardar_respuestas">
+            <result name="success">score_questions.jsp</result>
+        </action>
+        
+    </package>
+</struts>
